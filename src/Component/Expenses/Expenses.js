@@ -1,6 +1,5 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import style from './Expenses.module.css';
 
 const expenses = (props) => {
   const { name, amount, id } = props.expenses;

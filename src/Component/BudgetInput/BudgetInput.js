@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Link } from 'react-router-dom';
 
 class BudgetInput extends Component {
   state = {
@@ -92,7 +91,7 @@ class BudgetInput extends Component {
       <div>
         <form onSubmit={this.addNewBudget} autoComplete="off">
           <div>
-            <label for="budget">
+            <label htmlFor="budget">
               <strong>Input budget:</strong>
             </label>
             <select

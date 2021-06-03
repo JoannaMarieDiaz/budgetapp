@@ -87,21 +87,19 @@ class BudgetApp extends Component {
   };
 
   getTotal = () => {
-    let total = 0;
     const incTotal = this.state.budget.income
       .map((inc) => inc.amount)
       .reduce((a, b) => a + b, 0);
     const decTotal = this.state.budget.expenses
       .map((exp) => exp.amount)
       .reduce((a, b) => a + b, 0);
-    return (total = incTotal - decTotal);
+    return incTotal - decTotal;
   };
 
   onDelete = (id, type) => {
     let newState;
     if (type === 'income') {
       const budget = this.state.budget.income.filter((r) => r.id !== id);
-      console.log('click!');
       this.setState((prevState) => {
         newState = {
           ...prevState,
